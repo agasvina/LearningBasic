@@ -1,2 +1,2 @@
-This is dedicated for learning basic principle of java language.
+This is dedicated for learning the basic principle of algorithm..
 
