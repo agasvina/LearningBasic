@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.example1.org/Hero"
+  xmlns:hero="http://www.example1.org/Hero"
+   elementFormDefault="qualified">
+  <!-- the elementFormDefault ="qualified" denotes: 
+  All elements need to be qualified using prefix -->
+
+<element name="hero" type="hero:Hero"></element>
+
+<!-- specifying the type of element -->
+<complexType name="Hero">
+<!-- sequence element need to be in order, we can specify the 
+	 number of element it appears using minOccur or maxOccur -->
+	<sequence>
+		<element name="name" type="hero:NAME"/>
+		<element name="job" type="hero:JOB" minOccurs="1"/>
+		<element name="weapon" type="hero:WEAPON" maxOccurs="5"/>	
+	</sequence>
+	
+	<attribute name="id" type="hero:ID"/>
+</complexType>
+
+<simpleType name="ID">
+	<restriction base="int">
+		<pattern value="[0-9]*"></pattern>
+	</restriction>
+</simpleType>
+
+<simpleType name="NAME">
+	<restriction base="string">
+		<maxLength value="15"></maxLength>
+	</restriction>
+</simpleType>
+
+<simpleType name="JOB">
+	<restriction base="string">
+		<enumeration value="magician"/>
+		<enumeration value="blacksmith"/>
+		<enumeration value="knight"/>
+	</restriction>
+</simpleType>
+
+<complexType name="WEAPON">
+	<all>
+		<element name="type" type="string"/>
+		<element name="power" type="int"/>	
+	</all>
+</complexType>
+
+</schema>
+
