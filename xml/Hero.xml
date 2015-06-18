@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero:HeroList xmlns:hero="http://www.example1.org/Hero"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.example1.org/Hero Hero.xsd ">
+  <hero:Hero id="123">
+    <hero:name>hero:name</hero:name>
+    <hero:job>magician</hero:job>
+    <hero:weapon>
+      <hero:type>hero:type</hero:type>
+      <hero:power>0</hero:power>
+    </hero:weapon>
+  </hero:Hero>
+  <hero:Hero id = "234">
+    <hero:name>hero:name</hero:name>
+    <hero:job>magician</hero:job>
+    <hero:weapon>
+      <hero:type>hero:type</hero:type>
+      <hero:power>0</hero:power>
+    </hero:weapon>
+  </hero:Hero>
+</hero:HeroList>
+

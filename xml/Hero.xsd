@@ -5,8 +5,20 @@
    elementFormDefault="qualified">
   <!-- the elementFormDefault ="qualified" denotes: 
   All elements need to be qualified using prefix -->
+  
+  <!-- IMPORTANT: only one root allows in xml,
+  	if we need more element those elements need to 
+  	be warped with a container -->
 
-<element name="hero" type="hero:Hero"></element>
+
+<element name="HeroList" type="hero:HeroList"></element>
+
+
+<complexType name="HeroList">	
+	<sequence>
+		<element name="Hero" type="hero:Hero" minOccurs="2" maxOccurs="20"></element>
+	</sequence>
+</complexType>
 
 <!-- specifying the type of element -->
 <complexType name="Hero">
