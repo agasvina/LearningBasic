@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.lucareto.com/Hero"
+	xmlns:tns="http://www.lucareto.com/Hero"
+	elementFormDefault="qualified">
+		
+		<element name="hero" type="tns:HeroProfile"></element>
+		
+		<complexType name="HeroProfile">
+			<sequence>
+				<element name="heroName" type="string" minOccurs="0"/>
+				<element name="email" type="string" minOccurs="0"/>
+				<element name="weapon" type="tns:WEAPON" minOccurs="0"/>
+				<element name="dob" type="date" />
+			</sequence>
+		</complexType>
+		
+		<complexType name="WEAPON">
+			<sequence>
+				<element name="name" type="string"/>
+				<element name="power" type="int"/>
+			</sequence>
+		</complexType>
+		
+		
+</schema>
