@@ -48,6 +48,16 @@ public class BinaryTree {
         return result;
     }
     
+    //Mirroring the binary tree using recursive
+    public static Node mirror(Node root) {
+        if(root == null) return null;
+        //create a new binary node:
+        Node result = new Node(root.value);
+        result.left = mirror(root.right);
+        result.right = mirror(root.left);
+        return result;
+    }
+    
     public BinaryTree() {
         this.root = null;
     }
