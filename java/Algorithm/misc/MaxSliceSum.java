@@ -56,6 +56,38 @@ public class MaxSliceSum {
 		}
 		return result;
 	}
+    
+    
+    //This is a method to find an element in the array whose sum is k
+    //This is used for the array which contain no negative element.
+    public static ArrayList<Integer> findSeq(int [] elements, int k) {
+        int sumElement = 0;
+        int startElement = 0;
+        for(int i = 0; i < elements.length; i++) {
+            if(sumElement == k) break;
+            sumElement+= elements[i];
+            if(sumElement < k) continue;
+            while(sumElement > k) {
+                sumElement -= elements[startElement];
+                startElement++;
+                if(sumElement == k) break;
+            }
+        }
+        int sumArray = 0;
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        while(startElement < elements.length) {
+            sumArray += elements[startElement];
+            startElement++;
+            result.add(elements[startElement-1]);
+            if(sumArray == k) break;
+        }
+        if(sumArray == k) {
+            return result;
+        } else {
+            return null;
+        }
+        
+    }
 	
 }
 
