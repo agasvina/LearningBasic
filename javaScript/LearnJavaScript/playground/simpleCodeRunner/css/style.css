@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Neucha);
+
+  h1 {
+    position: center;
+    font-family: 'Neucha', cursive;    
+    font-weight: bold;
+  }
+
+  h3 {
+      font-family: 'Neucha', cursive;    
+  }
+
+  #button {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  textarea {
+      font-size: 15px;
+      font-family: 'Neucha', cursive;    
+  }
+
+  #tabs {
+    float: left;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+
+#resultCode {
+  width: 400;
+  height: 500;
+}
